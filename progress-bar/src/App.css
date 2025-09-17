@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progress-bar {
+  height: 1.5rem;
+  border: 1px solid darkgray;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
