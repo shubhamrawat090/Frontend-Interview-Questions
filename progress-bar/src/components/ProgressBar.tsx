@@ -23,13 +23,15 @@ const ProgressBar = ({
 
   return (
     <div style={{ width: width }} className="progress-bar">
-      <span style={{ color: progressPerc <= 51 ? "black" : "white" }}>
+      <span style={{ color: progressPerc <= 51 ? "black" : "white", zIndex: 1 }}>
         {progressPerc > 100 ? 100 : progressPerc}%
       </span>
       <div
         className="completion-bar"
         style={{
-          width: `${progressPerc}%`,
+          //   width: `${progressPerc}%`,
+          transform: `scaleX(${progressPerc / 100})`,
+          transformOrigin: "left",
           backgroundColor: completionColor,
           height: "100%",
         }}
